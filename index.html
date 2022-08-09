@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('bce3e9cbdf10e82a97a854e15822613e');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'JW.ORG 웹사이트에 방문하기',
+        description: '아래 버튼을 눌러 방문해보세요!',
+        imageUrl:
+          'https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F5f%2Fcc%2Fd8%2F5fccd8809c073f314a075e18845eeae5.jpg&type=a340',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/2022Convention/pub-co-r22_9_VIDEO',
+          webUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/2022Convention/pub-co-r22_9_VIDEO',
+        },
+      },
+      social: {
+        likeCount: 99999, //99999가 최대입니다
+        commentCount: 99999, //99999가 최대입니다
+        sharedCount: 99999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '지금 바로 접속하기',
+          link: {
+            mobileWebUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/2022Convention/pub-co-r22_9_VIDEO',
+            webUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/2022Convention/pub-co-r22_9_VIDEO',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
